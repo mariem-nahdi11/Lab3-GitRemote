@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet – Étudiant DSI</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            transition: 0.4s;
+        }
+        nav {
+            background: #1e40af;
+            padding: 15px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav h2 {
+            margin: 0;
+        }
+        nav button {
+            padding: 8px 15px;
+            border: none;
+            background: white;
+            color: #1e40af;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #1f2937;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        textarea {
+            width: 100%;
+            height: 140px;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        button.save {
+            padding: 12px 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        /* Dark Mode */
+        .dark {
+            background: #0f172a;
+            color: white;
+        }
+        .dark nav {
+            background: #0b1120;
+        }
+        .dark nav button {
+            background: white;
+            color: #0b1120;
+        }
+        .dark .container {
+            background: #1e293b;
+            color: white;
+        }
+        .dark textarea,
+        .dark input {
+            background: #0f172a;
+            color: white;
+            border: 1px solid #334155;
+        }
+        .dark table td, .dark table th {
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Projet Étudiant DSI</h2>
+        <button onclick="toggleMode()">Dark / Light</button>
+    </nav>
+
+    <div class="container">
+
+        <h1>Espace Travail – 2ème Année DSI</h1>
+
+        <div class="section">
+            <h2>Informations Étudiant</h2>
+            <input placeholder="Nom & Prénom">
+            <br><br>
+            <input placeholder="Classe / Section">
+            <br><br>
+            <input placeholder="Matière">
+        </div>
+
+        <div class="section">
+            <h2>Objectif du Projet</h2>
+            <textarea placeholder="Décrire l'objectif ici..."></textarea>
+        </div>
+
+        <div class="section">
+            <h2>Résumé des Tâches</h2>
+            <table>
+                <tr>
+                    <th>Tâche</th>
+                    <th>État</th>
+                    <th>Notes</th>
+                </tr>
+                <tr>
+                    <td>Étape 1</td>
+                    <td>Non fait</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Étape 2</td>
+                    <td>Non fait</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Analyse / Travail Réalisé</h2>
+            <textarea placeholder="Analyse détaillée..."></textarea>
+        </div>
+
+        <div class="section">
+            <h2>Résultats</h2>
+            <textarea placeholder="Résultats obtenus..."></textarea>
+        </div>
+
+        <button class="save">Enregistrer</button>
+
+    </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
+
+</body>
+</html>
